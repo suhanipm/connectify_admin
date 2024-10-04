@@ -47,14 +47,14 @@ function Login() {
           <form className="login-form" onSubmit={handleSubmit}>
             <div className='field'>
               <input
-                id='mobileOrEmailOrUsername'
+                id='adminname'
                 type="text"
-                name="mobileOrEmailOrUsername"
+                name="adminname"
                 value={credentials.mobileOrEmailOrUsername}
                 onChange={handleChange}
                 required
               />
-              <label htmlFor='mobileOrEmailOrUsername'>Mobile, Email, or Username</label>
+              <label htmlFor='adminname'>Admin name</label>
             </div>
             <div className='field'>
               <input
@@ -71,7 +71,6 @@ function Login() {
           </form>
         </div>
         <div className="box2">
-          <p>Don't have an account? <Link to="/signup" className="signup1">Sign Up</Link></p>
         </div>
       </div>
       <Outlet />
