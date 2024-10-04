@@ -1,36 +1,39 @@
+import { Link, Outlet } from "react-router-dom";
+import '../css/Nav.css';
+import home from '../assets/icons/home (2).png';       // Adjust the path as necessary
+import students from '../assets/icons/students.png';
+import admin from '../assets/icons/admin.png';
+import post from '../assets/icons/post.png';
+import comments from '../assets/icons/comments.png';
+import users from '../assets/icons/users.png';
+import staff from '../assets/icons/staff.png';
+import groups from '../assets/icons/groups.png';
 
-
-import StudentDatabase from './component/pages/StudentDatabase';
-import Posts from './component/pages/Posts';
-import Comments from './component/pages/Comments';
-import AdminManagement from './component/pages/AdminManagement';
-import { Link,Outlet } from 'react-router-dom';
 
 
 function Nav(){
     return(
         <div>
-                   <h1>Site Administration</h1>
-        <div className="admin-panel">
-          <div className="section">
-            <h3>CORE</h3>
-            <ul>
-              <li>
-                <Link to="/student-database">Student Database</Link>
-              </li>
-              <li>
-                <Link to="/posts">Posts</Link>
-              </li>
-              <li>
-                <Link to="/comments">Comments</Link>
-              </li>
-              <li>
-                <Link to="/admin-management">Admin Management</Link>
-              </li>
-            </ul>
-          </div>
+          <div className="menu">
+           <Link to={"/home"}><button className='menu-button'><img src={home} alt="Home" /> Home</button></Link>
+
+           <Link to={"students"}><button className='menu-button'><img src={students} alt="Students" /> Students</button></Link>
+
+           <Link to={"admin"}><button className='menu-button'><img src={admin} alt="Admin" /> Admin</button></Link>
+           
+           <Link to={"post"}><button className='menu-button'><img src={post} alt="Post" /> Post</button></Link>
+           
+           <Link to={"comments"}><button className='menu-button'><img src={comments} alt="comments" /> Comments</button></Link>
+           <Link to={"users"}><button className='menu-button'><img src={users} alt="users" /> Users</button></Link>
+
+           <Link to={"staff"}><button className='menu-button'><img src={staff} alt="staff" /> Staff</button></Link>
+           
+           <Link to={"groups"}><button className='menu-button'><img src={groups} alt="groups" /> groups</button></Link>
+           
+           
+           
         </div>
- 
+        <Outlet></Outlet>
         </div>
     );
 };
