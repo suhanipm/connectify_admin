@@ -12,7 +12,7 @@ function App() {
         {/* <Login></Login> */}
         {/* <Admin></Admin> */}
         <Home></Home>
-        <Nav></Nav>
+       
       </BrowserRouter>
     </div>
     
