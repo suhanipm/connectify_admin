@@ -2,6 +2,7 @@ import { Route,Routes } from "react-router-dom";
 
 import Login from "./Login";
 import Admin from "./Admin";
+import Home from "./Home";
 import StudentDatabase from "./StudentDatabase";
 
 
@@ -14,6 +15,7 @@ function Customeroutes(){
             <Route path="/posts" element={<Posts></Posts>} />
             <Route path="/comments" element={<Comments></Comments>} />
             <Route path="/admin-management" element={<AdminManagement></AdminManagement>} />
+            <Route path="/Home" element={<Home></Home>}></Route>
         </Routes>
     )
 }

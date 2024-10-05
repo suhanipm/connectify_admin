@@ -1,4 +1,6 @@
 import React from 'react';
+import Admin from './component/pages/Admin';
+
 
 const StudentDatabase = () => {
   return (
