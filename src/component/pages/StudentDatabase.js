@@ -8,6 +8,26 @@ const StudentDatabase = () => {
     { name: 'Jane Smith', usn: '1MS17EC002', email: 'jane@example.com', phone: '0987654321', branch: 'ECE' },
   ]);
 
+  // Function to handle deleting a student
+  const handleDelete = (index) => {
+    const updatedStudents = students.filter((_, i) => i !== index);
+    setStudents(updatedStudents);
+  };
+
+  // Function to handle editing a student
+  const handleEdit = (index) => {
+    const updatedName = prompt('Enter the new name', students[index].name);
+    const updatedEmail = prompt('Enter the new email', students[index].email);
+    const updatedPhone = prompt('Enter the new phone', students[index].phone);
+
+    const updatedStudents = students.map((student, i) =>
+      i === index
+        ? { ...student, name: updatedName, email: updatedEmail, phone: updatedPhone }
+        : student
+    );
+    setStudents(updatedStudents);
+  };
+
   return (
     <div>
       <h2>Manage Student Database</h2>
@@ -19,6 +39,7 @@ const StudentDatabase = () => {
             <th>Email</th>
             <th>Phone</th>
             <th>Branch</th>
+            <th>Actions</th> {/* New column for actions */}
           </tr>
         </thead>
         <tbody>
@@ -29,6 +50,10 @@ const StudentDatabase = () => {
               <td>{student.email}</td>
               <td>{student.phone}</td>
               <td>{student.branch}</td>
+              <td>
+                <button onClick={() => handleEdit(index)} className="edit-button">Edit</button>
+                <button onClick={() => handleDelete(index)} className="delete-button">Delete</button>
+              </td> {/* Edit and Delete buttons */}
             </tr>
           ))}
         </tbody>

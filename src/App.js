@@ -1,10 +1,12 @@
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 import Login from './component/pages/Login';
 import Admin from './component/pages/Admin';
 import Home from './component/pages/Home';
-import { BrowserRouter } from 'react-router-dom';
 import Nav from './component/pages/Nav';
 import StudentDatabase from './component/pages/StudentDatabase';
+import User from './component/pages/Users';
+
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
         {/* <Login></Login> */}
         {/* <Admin></Admin> */}
         <Home></Home>
-       <StudentDatabase></StudentDatabase>
+        <StudentDatabase></StudentDatabase>
+        <User></User>
       </BrowserRouter>
     </div>
     

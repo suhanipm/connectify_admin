@@ -4,6 +4,7 @@ import Login from "./Login";
 import Admin from "./Admin";
 import Home from "./Home";
 import StudentDatabase from "./StudentDatabase";
+import User from "./Users";
 
 
 function Customeroutes(){
@@ -16,6 +17,7 @@ function Customeroutes(){
             <Route path="/comments" element={<Comments></Comments>} />
             <Route path="/admin-management" element={<AdminManagement></AdminManagement>} />
             <Route path="/Home" element={<Home></Home>}></Route>
+            <Route path="/User" element={<User></User>}></Route>
         </Routes>
     )
 }
