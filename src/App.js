@@ -14,9 +14,9 @@ function App() {
       <BrowserRouter>
         {/* <Login></Login> */}
         {/* <Admin></Admin> */}
-        <Home></Home>
+        {/* <Home></Home> */}
         <StudentDatabase></StudentDatabase>
-        <User></User>
+        {/* <User></User> */}
       </BrowserRouter>
     </div>
     

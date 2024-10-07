@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../css/User.css';
-
+import Nav from './Nav';
 const User = () => {
   // Sample user data (replace with actual data from a backend API)
   const [users, setUsers] = useState([
@@ -43,6 +43,7 @@ const User = () => {
 
   return (
     <div>
+      <Nav/>
       <h2>Manage User Data</h2>
       <table border="1" cellPadding="10" cellSpacing="0">
         <thead>
