@@ -1,29 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/User.css';
 import Nav from './Nav';
 const User = () => {
   // Sample user data (replace with actual data from a backend API)
-  const [users, setUsers] = useState([
-    {
-      mobile: '7619683507',
-      email: 'rakshitabalikai@gmail.com',
-      fullName: 'Rakshita Balikai',
-      username: 'rakshii',
-      profilePic: '', // Add a default or example profile picture URL
-    },
-    {
-      mobile: '9876543210',
-      email: 'anotheruser@gmail.com',
-      fullName: 'Another User',
-      username: 'user123',
-      profilePic: '', // Add a default or example profile picture URL
-    },
-  ]);
+  const [users, setUsers] = useState([]);
+  const [error, setError] = useState(null);
+
+  // Fetch the users from the API when the component mounts
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch('http://localhost:5038/api/social_media/admin/users');
+        const data = await response.json();
+        console.log(data);
+        setUsers(data.users); // Assuming API returns { users: [...] }
+      } catch (error) {
+        setError("Error fetching student data");
+        console.error('Error:', error);
+      }
+    };
+    fetchUsers();
+  },
+  []);
 
   // Function to handle deleting a user
-  const handleDelete = (index) => {
-    const updatedUsers = users.filter((_, i) => i !== index);
-    setUsers(updatedUsers);
+  const handleDelete = async (userId) => {
+    try {
+      const response = await fetch(`http://localhost:5038/api/social_media/admin/deleteuser/${userId}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        alert('user deleted successfully');
+        setUsers(users.filter((user) => user._id !== userId)); // Update the list after deletion
+      } else {
+        const result = await response.json();
+        alert(result.message || 'Failed to delete user');
+      }
+    } catch (error) {
+      console.error('Error deleting user:', error);
+      alert('Error deleting user');
+    }
   };
 
   // Function to handle editing a user
