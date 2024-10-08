@@ -6,17 +6,14 @@ import Home from './component/pages/Home';
 import Nav from './component/pages/Nav';
 import StudentDatabase from './component/pages/StudentDatabase';
 import User from './component/pages/Users';
+import Customeroutes from './component/pages/Customroutes';
 
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <Login></Login> */}
-        {/* <Admin></Admin> */}
-        {/* <Home></Home> */}
-        <StudentDatabase></StudentDatabase>
-        {/* <User></User> */}
+        <Customeroutes></Customeroutes>
       </BrowserRouter>
     </div>
     

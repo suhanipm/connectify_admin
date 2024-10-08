@@ -15,20 +15,20 @@ function Nav(){
     return(
         <div>
           <div className="menu">
-           <Link to={"/home"}><button className='menu-button'><img src={home} alt="Home" /> Home</button></Link>
+           <Link to={"/"}><button className='menu-button'><img src={home} alt="Home" /> Home</button></Link>
 
-           <Link to={"students" }><button className='menu-button'><img src={students} alt="Students" /> Students</button></Link>
+           <Link to={"/student-database" }><button className='menu-button'><img src={students} alt="Students" /> Students</button></Link>
 
-           <Link to={"admin"}><button className='menu-button'><img src={admin} alt="Admin" /> Admin</button></Link>
+           <Link to={"/admin"}><button className='menu-button'><img src={admin} alt="Admin" /> Admin</button></Link>
            
-           <Link to={"post"}><button className='menu-button'><img src={post} alt="Post" /> Post</button></Link>
+           <Link to={"/post"}><button className='menu-button'><img src={post} alt="Post" /> Post</button></Link>
            
-           <Link to={"comments"}><button className='menu-button'><img src={comments} alt="comments" /> Comments</button></Link>
-           <Link to={"users"}><button className='menu-button'><img src={users} alt="users" /> Users</button></Link>
+           <Link to={"/comments"}><button className='menu-button'><img src={comments} alt="comments" /> Comments</button></Link>
+           <Link to={"/users"}><button className='menu-button'><img src={users} alt="users" /> Users</button></Link>
 
-           <Link to={"staff"}><button className='menu-button'><img src={staff} alt="staff" /> Staff</button></Link>
+           <Link to={"/staff"}><button className='menu-button'><img src={staff} alt="staff" /> Staff</button></Link>
            
-           <Link to={"groups"}><button className='menu-button'><img src={groups} alt="groups" /> groups</button></Link>
+           <Link to={"/groups"}><button className='menu-button'><img src={groups} alt="groups" /> groups</button></Link>
            
            
            
