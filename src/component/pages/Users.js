@@ -15,7 +15,7 @@ const User = () => {
         console.log(data);
         setUsers(data.users); // Assuming API returns { users: [...] }
       } catch (error) {
-        setError("Error fetching student data");
+        setError("Error fetching user data");
         console.error('Error:', error);
       }
     };
@@ -89,7 +89,7 @@ const User = () => {
               <td>{user.username}</td>
               <td>
                 <button onClick={() => handleEdit(index)} className="edit-button">Edit</button>
-                <button onClick={() => handleDelete(index)} className="delete-button">Delete</button>
+                <button onClick={() => handleDelete(user._id)} className="delete-button">Delete</button>
               </td> {/* Edit and Delete buttons */}
             </tr>
           ))}
