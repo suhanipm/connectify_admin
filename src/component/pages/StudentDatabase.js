@@ -52,7 +52,11 @@ const StudentDatabase = () => {
   return (
     <div className='student_database_container'>
       <Nav />
-      <h2>Manage Student Database</h2>
+      <div className='student_list'>
+      <div className='Addstudent'>
+        <h1>Manage Student Database</h1>
+        <Link to={`/Addstudent`}><button className="edit-button">Addstudent</button></Link>
+      </div>             
 
       {/* Display loading, error or the student table */}
       {loading ? (
@@ -66,7 +70,7 @@ const StudentDatabase = () => {
               <th>Name</th>
               <th>USN</th>
               <th>Email</th>
-              <th>Phone</th>
+              <th>Mobile</th>
               <th>Branch</th>
               <th>Actions</th>
             </tr>
@@ -78,7 +82,7 @@ const StudentDatabase = () => {
                   <td>{student.name}</td>
                   <td>{student.usn}</td>
                   <td>{student.email}</td>
-                  <td>{student.phone}</td>
+                  <td>{student.mobile}</td>
                   <td>{student.branch}</td>
                   <td>
                     <Link to={`/Editstudent/${student._id}`}><button className="edit-button">Edit</button></Link>
@@ -100,6 +104,7 @@ const StudentDatabase = () => {
           </tbody>
         </table>
       )}
+      </div>
     </div>
   );
 };

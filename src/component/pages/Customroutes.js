@@ -7,6 +7,7 @@ import StudentDatabase from "./StudentDatabase";
 import User from "./Users";
 import Post from "./Post";
 import Editstudent from "./Editstudent";
+import Addstudent from "./Addstudent";
 
 
 function Customeroutes(){
@@ -21,6 +22,7 @@ function Customeroutes(){
             <Route path="/Home" element={<Home></Home>}></Route>
             <Route path="/User" element={<User></User>}></Route>
             <Route path="/Editstudent/:studentId" element={<Editstudent></Editstudent>}></Route>
+            <Route path="/Addstudent" element={<Addstudent></Addstudent>}></Route>
         </Routes>
     )
 }

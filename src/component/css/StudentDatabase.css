@@ -68,3 +68,18 @@ table button {
   padding: 8px 16px; /* Adjust size for table buttons */
   border-radius: 10px; /* Smaller curve for table buttons */
 }
+.student_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.Addstudent{
+  display: flex;
+  justify-content: space-around;
+  
+}
+.Addstudent > h1{
+  margin-right: 155px;
+}

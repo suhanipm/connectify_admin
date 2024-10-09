@@ -1,8 +1,10 @@
 import Nav from "./Nav";
 import { useState } from "react";
 import "../css/Editstudent.css";
+import { useParams } from "react-router-dom";
 
 function Editstudent(){
+    const {_id}= useParams
     const[name, setname] = useState();
     const[email, setemail] = useState();
     const[mobile, setmobile] = useState();
@@ -13,7 +15,9 @@ function Editstudent(){
     const handleSubmit = async (e) => {
         e.preventDefault();
         const updatedProfile = {
-            // studentId,
+            _id,
+            gender,
+            dateOfBirth,
             name,
             email,
             mobile,
@@ -22,7 +26,7 @@ function Editstudent(){
         };
       
         try {
-            const response = await fetch('http://localhost:5038/api/social_media/update_profile', {
+            const response = await fetch('http://localhost:5038/api/social_media/update_student', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(updatedProfile),
@@ -66,6 +70,15 @@ function Editstudent(){
               maxLength="50"
               value={email}
               onChange={(e) => setemail(e.target.value)}
+            ></textarea>
+
+            <label htmlFor="mobile">Mobile</label>
+            <textarea
+              id="mobile"
+              placeholder="mobile"
+              maxLength="50"
+              value={mobile}
+              onChange={(e) => setmobile(e.target.value)}
             ></textarea>
 
             <label htmlFor="gender">Gender</label>
