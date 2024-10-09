@@ -59,9 +59,12 @@ const User = () => {
   };
 
   return (
-    <div>
+    <div className='user-container'>
       <Nav/>
+      
+      <div className='table'>
       <h2>Manage User Data</h2>
+      
       <table border="1" cellPadding="10" cellSpacing="0">
         <thead>
           <tr>
@@ -88,14 +91,16 @@ const User = () => {
               <td>{user.mobile}</td>
               <td>{user.username}</td>
               <td>
-                <button onClick={() => handleEdit(index)} className="edit-button">Edit</button>
+                
                 <button onClick={() => handleDelete(user._id)} className="delete-button">Delete</button>
               </td> {/* Edit and Delete buttons */}
             </tr>
           ))}
         </tbody>
       </table>
+      </div>
     </div>
+    
   );
 };
 

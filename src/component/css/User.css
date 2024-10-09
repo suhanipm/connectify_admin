@@ -3,8 +3,18 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
+    justify-content: center;
   }
+  .user-container {
+    display: flex;
+  }
+  .table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   
+  }
   h2 {
     text-align: center;
     color: #333;
