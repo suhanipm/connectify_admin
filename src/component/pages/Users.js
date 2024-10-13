@@ -44,19 +44,19 @@ const User = () => {
   };
 
   // Function to handle editing a user
-  const handleEdit = (index) => {
-    const updatedFullName = prompt('Enter the new full name', users[index].fullName);
-    const updatedEmail = prompt('Enter the new email', users[index].email);
-    const updatedMobile = prompt('Enter the new mobile', users[index].mobile);
-    const updatedProfilePic = prompt('Enter the new profile picture URL', users[index].profilePic);
+  // const handleEdit = (index) => {
+  //   const updatedFullName = prompt('Enter the new full name', users[index].fullName);
+  //   const updatedEmail = prompt('Enter the new email', users[index].email);
+  //   const updatedMobile = prompt('Enter the new mobile', users[index].mobile);
+  //   const updatedProfilePic = prompt('Enter the new profile picture URL', users[index].profilePic);
 
-    const updatedUsers = users.map((user, i) =>
-      i === index
-        ? { ...user, fullName: updatedFullName, email: updatedEmail, mobile: updatedMobile, profilePic: updatedProfilePic }
-        : user
-    );
-    setUsers(updatedUsers);
-  };
+  //   const updatedUsers = users.map((user, i) =>
+  //     i === index
+  //       ? { ...user, fullName: updatedFullName, email: updatedEmail, mobile: updatedMobile, profilePic: updatedProfilePic }
+  //       : user
+  //   );
+  //   setUsers(updatedUsers);
+  // };
 
   return (
     <div className='user-container'>
