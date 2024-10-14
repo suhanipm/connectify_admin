@@ -9,6 +9,8 @@ import Post from "./Post";
 import Editstudent from "./Editstudent";
 import Addstudent from "./Addstudent";
 import Addadmin from "./Addadmin";
+import Staff from "./Staff";
+import AddStaff from "./Addstaff";
 
 
 function Customeroutes(){
