@@ -37,10 +37,10 @@ function Addadmin() {
         <div className="edit_admin_container">
             <Nav />
             <div>
-                <div className="profile-settings">
+                <div className="admin-profile-settings">
                     <h2>Add Admin</h2>
-                    <div className="edit-profile">
-                        <form className="profile-form" onSubmit={handleSubmit}>
+                    <div className="admin-edit-profile">
+                        <form className="admin-profile-form" onSubmit={handleSubmit}>
                             <label htmlFor="name">Admin Name</label>
                             <textarea
                                 id="name"

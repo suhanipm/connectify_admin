@@ -18,12 +18,24 @@
   }
   
   .add-button {
-    background-color: #ff69b4;
+    /* background-color: #ff69b4;
     border: none;
     padding: 10px 20px;
     color: white;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 5px; */
+    background-color: rgb(223, 104, 253); /* Initial button color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px; /* Curved button */
+    transition: background 0.4s ease; /* Smooth transition */
   }
   
   .add-button:hover {

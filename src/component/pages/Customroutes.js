@@ -24,6 +24,7 @@ function Customeroutes(){
             <Route path="/User" element={<User></User>}></Route>
             <Route path="/Editstudent/:studentId" element={<Editstudent></Editstudent>}></Route>
             <Route path="/Addstudent" element={<Addstudent></Addstudent>}></Route>
+            <Route path="/Post" element={<Post></Post>}></Route>
         </Routes>
     )
 }
