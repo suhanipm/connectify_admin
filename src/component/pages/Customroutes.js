@@ -8,9 +8,8 @@ import User from "./Users";
 import Post from "./Post";
 import Editstudent from "./Editstudent";
 import Addstudent from "./Addstudent";
-import Staff from "./Staff";
-import AddStaff from "./Addstaff";
-// import Editstaff from "./Editstaff";
+import Addadmin from "./Addadmin";
+
 
 function Customeroutes(){
     return(
@@ -20,7 +19,7 @@ function Customeroutes(){
             <Route path="/student-database" element={<StudentDatabase></StudentDatabase>} />
             <Route path="/posts" element={<Post></Post>} />
             <Route path="/comments" element={<Admin></Admin>} />
-            {/* <Route path="/admin-management" element={<AdminManagement></AdminManagement>} /> */}
+            <Route path="/Addadmin" element={<Addadmin></Addadmin>}></Route>
             <Route path="/Home" element={<Home></Home>}></Route>
             <Route path="/User" element={<User></User>}></Route>
             <Route path="/Editstudent/:studentId" element={<Editstudent></Editstudent>}></Route>
