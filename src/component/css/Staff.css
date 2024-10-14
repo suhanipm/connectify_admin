@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .staff-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Table header with specified color */
+  th {
+    background-color: rgb(223, 104, 253); /* Initial color */
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1; /* Row hover effect */
+  }
+  
+  /* General Button Styles */
+  button {
+    background-color: rgb(223, 104, 253); /* Initial color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px; /* Curved button */
+    transition: background 0.4s ease; /* Smooth transition */
+  }
+  
+  /* Edit and Delete buttons with gradient hover effect */
+  .edit-button, .delete-button {
+    background-color: rgb(104, 223, 253); /* Changed initial color for staff */
+  }
+  
+  .edit-button:hover, .delete-button:hover {
+    background: linear-gradient(45deg, #73f5f5, #6e9bff); /* Blue-cyan gradient on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  }
+  
+  /* Table buttons smaller for better fit */
+  table button {
+    padding: 8px 16px; /* Adjust size for table buttons */
+    border-radius: 10px; /* Smaller curve for table buttons */
+  }
+  

@@ -1,0 +1,94 @@
+/* Container for the entire page */
+.edit_staff_container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Nav Bar Styling */
+nav {
+    width: 200px;
+    background-color: #222;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff00ff;
+}
+
+/* Main Content Area */
+.profile-settings {
+    margin-left: 220px;  /* Space for the nav bar */
+    padding: 40px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-profile {
+    margin-top: 100px;
+    margin-left: -50px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Form styling */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-form label {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+textarea {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    resize: none;  /* Disable resizing of textareas */
+}
+
+textarea::placeholder {
+    color: #999;
+}
+
+.submit-btn {
+    background-color: #ff00ff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e600e6;
+}

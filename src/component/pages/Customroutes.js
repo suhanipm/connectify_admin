@@ -8,7 +8,9 @@ import User from "./Users";
 import Post from "./Post";
 import Editstudent from "./Editstudent";
 import Addstudent from "./Addstudent";
-
+import Staff from "./Staff";
+import AddStaff from "./Addstaff";
+// import Editstaff from "./Editstaff";
 
 function Customeroutes(){
     return(
@@ -23,6 +25,9 @@ function Customeroutes(){
             <Route path="/User" element={<User></User>}></Route>
             <Route path="/Editstudent/:studentId" element={<Editstudent></Editstudent>}></Route>
             <Route path="/Addstudent" element={<Addstudent></Addstudent>}></Route>
+            <Route path="/Staff" element={<Staff></Staff>}></Route>
+            {/* <Route path="/Editstaff" element={<Editstaff></Editstaff>}></Route> */}
+            <Route path="/AddStaff" element={<AddStaff></AddStaff>}></Route>
         </Routes>
     )
 }
