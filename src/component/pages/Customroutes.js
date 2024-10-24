@@ -19,7 +19,6 @@ function Customeroutes(){
             <Route path="/" element={<Login></Login>}></Route>
             <Route path="/admin" element={<Admin></Admin>}></Route>
             <Route path="/student-database" element={<StudentDatabase></StudentDatabase>} />
-            <Route path="/posts" element={<Post></Post>} />
             <Route path="/comments" element={<Admin></Admin>} />
             <Route path="/Addadmin" element={<Addadmin></Addadmin>}></Route>
             <Route path="/Home" element={<Home></Home>}></Route>
@@ -27,7 +26,7 @@ function Customeroutes(){
             <Route path="/Editstudent/:studentId" element={<Editstudent></Editstudent>}></Route>
             <Route path="/Addstudent" element={<Addstudent></Addstudent>}></Route>
             <Route path="/Staff" element={<Staff></Staff>}></Route>
-            <Route path="/Post" element={<Post></Post>}></Route>
+            <Route path="/posts" element={<Post></Post>}></Route>
             {/* <Route path="/Editstaff" element={<Editstaff></Editstaff>}></Route> */}
             <Route path="/AddStaff" element={<AddStaff></AddStaff>}></Route>
         </Routes>
