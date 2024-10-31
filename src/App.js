@@ -7,6 +7,7 @@ import Nav from './component/pages/Nav';
 import StudentDatabase from './component/pages/StudentDatabase';
 import User from './component/pages/Users';
 import Staff from './component/pages/Staff';
+import EditStaff from './component/pages/Editstaff';
 import Customeroutes from './component/pages/Customroutes';
 
 
