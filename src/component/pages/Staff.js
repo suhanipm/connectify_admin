@@ -81,7 +81,7 @@ const Staff = () => {
           {staff.map((member, index) => (
             <tr key={index}>
               <td>{member.name}</td>
-              <td>{member.branch}</td>
+              <td>{member.department}</td>
               <td>{member.mobile}</td>
               <td>{member.email}</td>
               <td>
