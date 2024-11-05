@@ -6,7 +6,6 @@
   .admin_list {
     flex: 1;
     padding: 20px;
-    background: linear-gradient(to bottom right, #ff69b4, #800080);
     color: black;
   }
   

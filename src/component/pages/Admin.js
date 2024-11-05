@@ -12,7 +12,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchAdmins = async () => {
       try {
-        const response = await fetch('http://localhost:5038/api/social_media/admin/admins');
+        const response = await fetch('http://localhost:5038/api/social_media/admin');
         const data = await response.json();
         if (data && data.admins) {
           setAdmins(data.admins); // Only set if data.admins exists

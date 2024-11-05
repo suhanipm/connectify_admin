@@ -62,11 +62,12 @@ const Staff = () => {
     <div className='staff-container'>
       <Nav/>
       
-      <div className='table'>
+      <div className='staff-table'>
+        <div className='Addstaff'>
       <h2>Manage Staff Data</h2>
-      <Link to={`/Addstaff`}><button className="edit-button">Add staff</button></Link>
+      <Link to={`/Addstaff`}><button className="staff-edit-button">Add staff</button></Link>
 
-      
+      </div>
       <table border="1" cellPadding="10" cellSpacing="0">
         <thead>
           <tr>
@@ -85,8 +86,8 @@ const Staff = () => {
               <td>{member.mobile}</td>
               <td>{member.email}</td>
               <td>
-                
-                <button onClick={() => handleDelete(member._id)} className="delete-button">Delete</button>
+              <Link to={`/Editstaff/${staff._id}`}><button className="staff-edit-button">Edit</button></Link>
+              <button onClick={() => handleDelete(member._id)} className="staff-delete-button">Delete</button>
               </td> {/* Edit and Delete buttons */}
             </tr>
           ))}
