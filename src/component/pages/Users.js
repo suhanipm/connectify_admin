@@ -79,13 +79,16 @@ const User = () => {
         <tbody>
           {users.map((user, index) => (
             <tr key={index}>
+              
               <td>
-                {user.profilePic ? (
-                  <img src={user.profilePic} alt="Profile" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
-                ) : (
+                 {user.profile_pic ? (
+                  <img src={user.profile_pic} alt="Profile" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+                    ) : (
                   <div style={{ width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#ccc' }} />
-                )}
+                     )}
               </td>
+
+      
               <td>{user.fullName}</td>
               <td>{user.email}</td>
               <td>{user.mobile}</td>
