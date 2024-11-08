@@ -1,8 +1,10 @@
 .post-container {
     display: flex;
-    justify-content: center;
     width: 800px;
     background: cover;
+    margin-left: 60%;
+    
+    
 }
 
 .posts{
@@ -10,13 +12,12 @@
     display: flex;
     width: 70%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   
   }
 
 .post {
     /* background-color: #fff; */
-    border: 1px solid #dbdbdb;
+    /* border: 1px solid #dbdbdb; */
     width: 80%;
     margin-bottom: 20px;
     border-radius: 3px;
@@ -43,4 +44,33 @@
     justify-content: space-around;
     align-items: center;
     color: #fff;
+  }
+  .profile-picture{
+
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 70px;
+  }
+  .post-photos{
+    height: 400px;
+
+  }
+  .likeandcomment{
+    display: flex;
+  }
+  .delete-button{
+    background-color: rgb(223, 104, 253); /* Initial button color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px; /* Curved button */
+    transition: background 0.4s ease; /* Smooth transition */
+    margin: 20px;
+    
   }

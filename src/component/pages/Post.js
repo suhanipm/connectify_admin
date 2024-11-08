@@ -6,13 +6,14 @@ import Nav from './Nav';
 function Post(){
   const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
+   // Fetch posts and stories when the component mounts
+   useEffect(() => {
+    
     // Fetch posts from API
     fetch('http://localhost:5038/api/social_media/posts')
       .then(response => {
         if (response.headers.get('content-type').includes('application/json')) {
           return response.json();
-          
         } else {
           throw new Error('Posts response is not JSON');
         }
@@ -29,30 +30,36 @@ function Post(){
     <div className='post-container'>
               {/* Post */}
               <Nav></Nav>
-              <div className="posts">
+        <div className="posts">
           {posts.length > 0 ? (
             posts.map((post, index) => (
-              <div key={index} className="post autoshow">
+              <div key={index} className="post">
                 <div className="post-header">
-                  <div className="profile-picture"></div>
+                  <div>
+                    <img className ="profile-picture" src={post.user.profile_pic} alt="" />
+                  </div>
                   <div className="profile-info">
-                    <p>{post.username}</p>
+                    <p>{post.user.username}</p>
                     <span>{post.location}</span>
                   </div>
                 </div>
                 <div className="post-image">
-                  {post.file && post.file.startsWith("data:image") ? (
-                    <img src={post.file} alt={post.caption} />
+                  {/* Use the fileUrl for images or videos */}
+                  {post.mediaType === 'image' ? (
+                    <img  className="post-photos" src={`http://localhost:5038${post.fileUrl}`} alt={post.caption} />
                   ) : (
-                    <video autoPlay loop muted>
-                      <source src={post.file} type="video/mp4" />
+                    <video  className="post-photos" controls autoPlay loop muted>
+                      <source src={`http://localhost:5038${post.fileUrl}`} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   )}
                 </div>
                 <div className='postDescription'>
-                <p className='captions'>{post.caption}</p>
-                {/* <button className='menu-button'><img src={like} alt="Home" /></button> */}
+                  <p className='captions'>{post.caption}</p>
+                  <div className='likeandcomment'>
+                    <button className='delete-button'> Delete</button>
+                    <button className='delete-button'>Block</button>
+                  </div>
                 </div>
               </div>
             ))
@@ -61,6 +68,7 @@ function Post(){
           )}
         </div>
       </div>
+
    
   );
 }

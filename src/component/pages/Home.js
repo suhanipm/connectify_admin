@@ -1,8 +1,10 @@
 import '../css/Home.css';
 import Nav from './Nav';
 
+
 function Home() {
-  return (
+  
+return (
     <div className='homecontainer'>
       <Nav />
       <div className="card-container">
