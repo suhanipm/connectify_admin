@@ -1,6 +1,6 @@
 import '../css/Login.css';
 import { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Login() {
@@ -9,6 +9,8 @@ function Login() {
     mobileOrEmailOrUsername: '',
     password: ''
   });
+
+  const navigate = useNavigate();  // For navigating after login
 
   // Handle input changes
   const handleChange = (e) => {
@@ -23,12 +25,17 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Replace with your actual login API endpoint
-      const response = await axios.post('https://your-api-url.com/login', credentials);
-      console.log('Login success:', response.data);
-      // Perform login actions (e.g., navigate to a different page, store token, etc.)
+      // Make a POST request to the backend login endpoint
+      const response = await axios.post('http://localhost:5038/api/social_media/addadmin/login', credentials);
+
+      if (response.status === 200) {
+        console.log('Login success:', response.data);
+        // Redirect to admin dashboard or other pages after successful login
+        navigate('/admin-dashboard');  // You can change this to your desired route
+      }
     } catch (error) {
       console.error('Login failed:', error);
+      alert(error.response?.data?.message || 'Login failed');
     }
   };
 
@@ -37,40 +44,36 @@ function Login() {
       <div className="main-container-login">
         <div className="box1">
           <div className="heading">
-            {/* <h1 className="instagram-logo">Instagram</h1> */}
-            {/* You can uncomment and use a background video here */}
-            {/* <video autoPlay muted loop id="background-video">
-              <source src="path_to_your_video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video> */}
+            {/* Optional logo or background */}
           </div>
           <form className="login-form" onSubmit={handleSubmit}>
-            <div className='field'>
+            <div className="field">
               <input
-                id='adminname'
+                id="mobileOrEmailOrUsername"
                 type="text"
-                name="adminname"
+                name="mobileOrEmailOrUsername"
                 value={credentials.mobileOrEmailOrUsername}
                 onChange={handleChange}
                 required
               />
-              <label htmlFor='adminname'>Admin name</label>
+              <label htmlFor="mobileOrEmailOrUsername">Admin Email or Phone</label>
             </div>
-            <div className='field'>
+            <div className="field">
               <input
-                id='password'
+                id="password"
                 type="password"
                 name="password"
                 value={credentials.password}
                 onChange={handleChange}
                 required
               />
-              <label htmlFor='password'>Password</label>
+              <label htmlFor="password">Password</label>
             </div>
             <button className="login-button" title="login">Log In</button>
           </form>
         </div>
         <div className="box2">
+          {/* You can add any other content like a footer or logo here */}
         </div>
       </div>
       <Outlet />
