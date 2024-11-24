@@ -7,6 +7,7 @@ body {
   }
   .user-container {
     display: flex;
+    margin-left: 30%;
   }
   .table{
     display: flex;

@@ -43,6 +43,28 @@ const User = () => {
     }
   };
 
+   // Function to handle blocking a user
+const handleBlock = (userId) => {
+  fetch(`http://localhost:5038/api/social_media/admin/blockuser/${userId}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(response => response.json()) // Parse JSON response
+    .then(data => {
+      if (data.message === 'User already blocked') {
+        alert(data.message);
+      } else if (data.message === 'User blocked successfully') {
+        alert(data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Error blocking user:', error);
+      alert('Failed to block user');
+    });
+};
+
   // Function to handle editing a user
   // const handleEdit = (index) => {
   //   const updatedFullName = prompt('Enter the new full name', users[index].fullName);
@@ -73,7 +95,9 @@ const User = () => {
             <th>Email</th>
             <th>Mobile</th>
             <th>Username</th>
-            <th>Actions</th> {/* Column for actions */}
+            <th>Delete</th> 
+            <th>Block</th>
+            {/* Column for actions */}
           </tr>
         </thead>
         <tbody>
@@ -97,6 +121,9 @@ const User = () => {
                 
                 <button onClick={() => handleDelete(user._id)} className="delete-button">Delete</button>
               </td> {/* Edit and Delete buttons */}
+              <td>
+                <button onClick={() => handleBlock(user._id)} className="delete-button">Block</button>
+              </td>
             </tr>
           ))}
         </tbody>
