@@ -24,13 +24,14 @@ function Nav(){
            <Link to={"/posts"}><button className='menu-button'><img src={post} alt="Post" /> Post</button></Link>
            
            <Link to={"/comments"}><button className='menu-button'><img src={comments} alt="comments" /> Comments</button></Link>
+
            <Link to={"/User"}><button className='menu-button'><img src={users} alt="users" /> Users</button></Link>
 
            <Link to={"/staff"}><button className='menu-button'><img src={staff} alt="staff" /> Staff</button></Link>
            
            <Link to={"/groups"}><button className='menu-button'><img src={groups} alt="groups" /> groups</button></Link>
            
-           
+           <Link to={"/blockeduser"}><button className='menu-button'><img src={users} alt="users" />Blocked Users</button></Link>
            
         </div>
         <Outlet></Outlet>

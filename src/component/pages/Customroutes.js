@@ -12,7 +12,7 @@ import Addadmin from "./Addadmin";
 import Staff from "./Staff";
 import AddStaff from "./Addstaff";
 import EditStaff from "./Editstaff";
-
+import Blockeduser from "./Blockeduser";
 
 function Customeroutes(){
     return(
@@ -30,6 +30,7 @@ function Customeroutes(){
             <Route path="/posts" element={<Post></Post>}></Route>
             <Route path="/EditStaff/:staffId" element={<EditStaff></EditStaff>}></Route>
             <Route path="/AddStaff" element={<AddStaff></AddStaff>}></Route>
+            <Route path="/Blockeduser" element={<Blockeduser></Blockeduser>}></Route>
         </Routes>
     )
 }
