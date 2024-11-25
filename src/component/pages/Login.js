@@ -24,20 +24,23 @@ function Login() {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('Credentials:', credentials); // Debugging purpose
     try {
-      // Make a POST request to the backend login endpoint
-      const response = await axios.post('http://localhost:5038/api/social_media/addadmin/login', credentials);
+        const response = await axios.post(
+            'http://localhost:5038/api/social_media/addadmin/login',
+            credentials
+        );
 
-      if (response.status === 200) {
-        console.log('Login success:', response.data);
-        // Redirect to admin dashboard or other pages after successful login
-        navigate('/admin-dashboard');  // You can change this to your desired route
-      }
+        if (response.status === 200) {
+            console.log('Login success:', response.data);
+            navigate('/home');
+        }
     } catch (error) {
-      console.error('Login failed:', error);
-      alert(error.response?.data?.message || 'Login failed');
+        console.error('Login failed:', error.response?.data || error);
+        alert(error.response?.data?.message || 'Login failed');
     }
-  };
+};
+
 
   return (
     <div>
