@@ -14,14 +14,16 @@
   .edit_student_container{
     display: flex;
     color: #fff;
+    justify-content: center;
+    align-items: center;
   }
-  .profile-container {
+  /* .profile-container {
     margin-left: 200px;
     width: 86.98vw;
     background-color: #000;
     display: flex;
   }
-  
+   */
   .sidebar {
     width: 250px;
     background-color: #1c1c1c;
@@ -50,6 +52,7 @@
   .profile-settings {
     flex-grow: 1;
     padding: 20px;
+    
   }
   
   .profile-settings  h2 {

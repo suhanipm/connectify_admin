@@ -72,6 +72,8 @@ table button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 600px;
+  margin-top: 70px;
 
 }
 .Addstudent{

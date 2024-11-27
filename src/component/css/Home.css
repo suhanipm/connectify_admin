@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 0px;
     /* margin-bottom: 400px; */
 }
 
@@ -32,6 +32,9 @@ body {
     text-align: center;
     min-width: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 270px;
+  margin-top: 217px;
+
 }
 
 .info-card:hover {

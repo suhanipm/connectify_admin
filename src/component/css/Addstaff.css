@@ -32,7 +32,8 @@ nav a:hover {
 
 /* Main Content Area */
 .profile-settings {
-    margin-left: 220px;  /* Space for the nav bar */
+    margin-left: 220px;
+    /* Space for the nav bar */
     padding: 40px;
     flex-grow: 1;
     display: flex;
@@ -41,8 +42,8 @@ nav a:hover {
 }
 
 .edit-profile {
-    margin-top: 100px;
-    margin-left: -50px;
+    margin-top: 70px;
+    margin-left: 270px;
     background: rgba(0, 0, 0, 0.6);
     padding: 30px;
     border-radius: 8px;
@@ -70,7 +71,8 @@ textarea {
     padding: 10px;
     margin-bottom: 15px;
     font-size: 16px;
-    resize: none;  /* Disable resizing of textareas */
+    resize: none;
+    /* Disable resizing of textareas */
 }
 
 textarea::placeholder {
