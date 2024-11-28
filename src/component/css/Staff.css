@@ -1,5 +1,6 @@
 .staff-container {
   display: flex;
+  margin-left: 550px;
 }
 
 .staff-table{
