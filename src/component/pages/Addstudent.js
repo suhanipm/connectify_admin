@@ -41,8 +41,8 @@ function Addstudent() {
         <div className="edit_student_container">
             <Nav />
             <div>
-                <div className="profile-settings">
-                    <h2>Add student</h2>
+                <div className="profile-setting">
+                    <h2 className="h2">Add student</h2>
                     <div className="edit-profile">
                         <form className="profile-form" onSubmit={handleSubmit}>
                             <label htmlFor="name">Name</label>

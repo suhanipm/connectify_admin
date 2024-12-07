@@ -42,7 +42,7 @@ nav a:hover {
 }
 
 .edit-profile {
-    margin-top: 70px;
+    margin-top: 37px;
     margin-left: 270px;
     background: rgba(0, 0, 0, 0.6);
     padding: 30px;
@@ -55,6 +55,7 @@ nav a:hover {
 .profile-form {
     display: flex;
     flex-direction: column;
+    margin: 30px 20px;
 }
 
 .profile-form label {
