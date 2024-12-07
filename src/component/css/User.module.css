@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  justify-content: center;
+  color: white; /* Default text color */
+}
+
+.user-container {
+  display: flex;
+  margin-left: 30%;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #622222;
+}
+
+
+h2 {
+  text-align: center;
+  color: #ffdddd; /* Light red */
+}
+
+/* Table Styles */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #1a0f0fc5; /* Deep red */
+  color: #fff; /* White text for contrast */
+  font-weight: bold;
+  text-align: left;
+  padding: 12px 15px;
+}
+
+td {
+  padding: 12px 15px;
+  text-align: left;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(45deg, #de0f0f, #f06a6a);
+  border: none;
+  color: black; 
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background 0.4s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff9999, #ffcccc); /* Lighter hover gradient */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}

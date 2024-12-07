@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/User.css';
+import '../css/User.module.css';
 import Nav from './Nav';
 const User = () => {
   // Sample user data (replace with actual data from a backend API)
@@ -84,9 +84,7 @@ const handleBlock = (userId) => {
     <div className='user-container'>
       <Nav/>
       
-      <div className='table'>
-      <h2>Manage User Data</h2>
-      
+      <div className='table'>      
       <table border="1" cellPadding="10" cellSpacing="0">
         <thead>
           <tr>

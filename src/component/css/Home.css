@@ -2,17 +2,19 @@
     display: flex;
     margin-top: 0px;
 }
-body {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background: url('../assets/background/blurry-gradient-haikei.png') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
+}
+
+body {
+    background: radial-gradient(circle, red, black);
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 
 /* Container to hold the cards */
 .card-container {

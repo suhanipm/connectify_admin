@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/StudentDatabase.css';
+import '../css/StudentDatabase.module.css';
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
 
@@ -54,7 +54,6 @@ const StudentDatabase = () => {
       <Nav />
       <div className='student_list'>
       <div className='Addstudent'>
-        <h1>Manage Student Database</h1>
         <Link to={`/Addstudent`}><button className="edit-button">Addstudent</button></Link>
       </div>             
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/Admin.css'; // Ensure this CSS file exists for styling
+import '../css/Admin.module.css'; // Ensure this CSS file exists for styling
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
 
@@ -34,7 +34,6 @@ const Admin = () => {
       <Nav />
       <div className='admin_list'>
         <div className='Addadmin'>
-          <h1>Manage Admin Database</h1>
           <Link to={`/Addadmin`}>
             <button className="add-button">Add Admin</button>
           </Link>

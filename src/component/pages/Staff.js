@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/Staff.css';
+import '../css/Staff.module.css';
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
 
@@ -64,7 +64,6 @@ const Staff = () => {
       
       <div className='staff-table'>
         <div className='Addstaff'>
-      <h2>Manage Staff Data</h2>
       <Link to={`/Addstaff`}><button className="staff-edit-button">Add staff</button></Link>
 
       </div>
