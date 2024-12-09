@@ -61,7 +61,7 @@
   .delete-button{
     background-color: rgb(223, 104, 253); /* Initial button color */
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -69,7 +69,7 @@
     font-size: 16px;
     margin: 5px;
     cursor: pointer;
-    border-radius: 20px; /* Curved button */
+    border-radius: 10px; /* Curved button */
     transition: background 0.4s ease; /* Smooth transition */
     margin: 20px;
     margin-left: auto;
