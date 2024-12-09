@@ -1,19 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-
   margin: 0;
   max-width: 100%;
   overflow-x: hidden;
   justify-content: center;
-  color: white; /* Default text color */
 }
 
-.user-container {
+.user-management-container {
   display: flex;
   margin-left: 30%;
 }
 
-.table {
+.user-management-table {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,40 +23,50 @@ body {
   background-color: #622222;
 }
 
-
 h2 {
   text-align: center;
-  color: #ffdddd; /* Light red */
+  color: #ffdddd;
 }
 
-/* Table Styles */
-table {
+.user-table {
   width: 90%;
   margin: 20px auto;
   border-collapse: separate;
   border-spacing: 0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
 }
 
-th {
-  background-color: #1a0f0fc5; /* Deep red */
-  color: #fff; /* White text for contrast */
+.user-table th {
+  background-color: #1a0f0fc5;
+  color: #fff;
   font-weight: bold;
   text-align: left;
   padding: 12px 15px;
 }
 
-td {
+.user-table td {
   padding: 12px 15px;
   text-align: left;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
-/* Buttons */
-button {
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.placeholder-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.delete-button, .block-button {
   background: linear-gradient(45deg, #de0f0f, #f06a6a);
   border: none;
   color: black; 
@@ -73,7 +81,7 @@ button {
   transition: background 0.4s ease;
 }
 
-button:hover {
-  background: linear-gradient(45deg, #ff9999, #ffcccc); /* Lighter hover gradient */
+.delete-button:hover, .block-button:hover {
+  background: linear-gradient(45deg, #ff9999, #ffcccc);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }

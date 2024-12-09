@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/User.module.css';
+import '../css/User.css';
 import Nav from './Nav';
 const User = () => {
   // Sample user data (replace with actual data from a backend API)

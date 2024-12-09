@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/Admin.module.css'; // Ensure this CSS file exists for styling
+import '../css/Admin.css'; // Global CSS file
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
 
@@ -8,14 +8,13 @@ const Admin = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch the admins from the API when the component mounts
   useEffect(() => {
     const fetchAdmins = async () => {
       try {
         const response = await fetch('http://localhost:5038/api/social_media/admin');
         const data = await response.json();
         if (data && data.admins) {
-          setAdmins(data.admins); // Only set if data.admins exists
+          setAdmins(data.admins);
         } else {
           setError("No admins found");
         }
@@ -23,50 +22,50 @@ const Admin = () => {
         setError("Error fetching admin data");
         console.error('Error:', error);
       } finally {
-        setLoading(false); // Stop loading after the fetch completes
+        setLoading(false);
       }
     };
     fetchAdmins();
   }, []);
 
   return (
-    <div className='admin_database_container'>
+    <div className="admin-container">
       <Nav />
-      <div className='admin_list'>
-        <div className='Addadmin'>
+      <div className="admin-list">
+        <div className="add-admin">
           <Link to={`/Addadmin`}>
             <button className="add-button">Add Admin</button>
           </Link>
-        </div>             
-
-        {/* Display loading, error or the admin table */}
+        </div>
         {loading ? (
           <p>Loading...</p>
         ) : error ? (
           <p className="error">{error}</p>
         ) : (
-          <table border="1" cellPadding="10" cellSpacing="0">
+          <table className="admin-table">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Password</th>
-                <th>Phone</th>
+                <th className="admin-th">Name</th>
+                <th className="admin-th">Email</th>
+                <th className="admin-th">Password</th>
+                <th className="admin-th">Phone</th>
               </tr>
             </thead>
             <tbody>
               {admins.length > 0 ? (
                 admins.map((admin) => (
                   <tr key={admin._id}>
-                    <td>{admin.name}</td>
-                    <td>{admin.email}</td>
-                    <td>{admin.password}</td>
-                    <td>{admin.phone}</td>
+                    <td className="admin-td">{admin.name}</td>
+                    <td className="admin-td">{admin.email}</td>
+                    <td className="admin-td">{admin.password}</td>
+                    <td className="admin-td">{admin.phone}</td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan="4">No admins found</td>
+                  <td colSpan="4" className="admin-td">
+                    No admins found
+                  </td>
                 </tr>
               )}
             </tbody>

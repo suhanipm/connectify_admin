@@ -28,8 +28,11 @@ th, td {
 
 /* Table header with specified color */
 th {
-  background-color: rgb(223, 104, 253); /* Initial color */
-  color: white;
+  background-color: #1a0f0fc5; /* Deep red */
+  color: #fff; /* White text for contrast */
+  font-weight: bold;
+  text-align: left;
+  padding: 12px 15px;
 }
 
 
@@ -51,7 +54,7 @@ button {
 
 /* Edit and Delete buttons with gradient hover effect */
 .edit-button, .delete-button {
-  background-color: rgb(223, 104, 253); /* Initial color */
+  background-color: rgb(0, 0, 0); /* Initial color */
 }
 
 .edit-button:hover, .delete-button:hover {
@@ -62,7 +65,7 @@ button {
 /* Table buttons smaller for better fit */
 table button {
   padding: 8px 16px; /* Adjust size for table buttons */
-  border-radius: 10px; /* Smaller curve for table buttons */
+  border-radius: 10px;
 }
 .student_list{
   display: flex;
