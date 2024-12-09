@@ -3,91 +3,57 @@ import '../css/Group.css'; // Ensure this CSS file exists for styling
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
 
-const Group = () => {
-  const [groups, setGroup] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  // Fetch the groups from the API when the component mounts
-  useEffect(() => {
-    const fetchGroup = async () => {
-      try {
-        const response = await fetch('http://localhost:5038/api/social_media/groups'); // Update with the correct API endpoint
-        const data = await response.json();
-        if (data && data.groups) {
-          setGroup(data.groups); // Only set if data.groups exists
-        } else {
-          setError("No groups found");
-        }
-      } catch (error) {
-        setError("Error fetching group data");
-        console.error('Error:', error);
-      } finally {
-        setLoading(false); // Stop loading after the fetch completes
-      }
-    };
-    fetchGroup();
-  }, []);
+function Group() {
+    const [groups, setGroups] = useState([]);
 
-  return (
-    <div className='groups_database_container'>
-      <Nav />
-      <div className='groups_list'>
-        <div className='createGroup'>
-          <Link to={`/CreateGroup`}>
-            <button className="create-button">Create Group</button>
+    // Fetch groups from the backend
+    useEffect(() => {
+        fetch('http://localhost:5038/api/social_media/admin/groups')
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.groups) {
+                    setGroups(data.groups);
+                } else {
+                    alert(data.message || "No groups found.");
+                }
+            })
+            .catch((err) => console.error("Error fetching groups:", err));
+    }, []);
+
+    return (
+        <div>
+          <Nav/>
+          <Link to={`/Creategroup`}>
+            <button className="add-button">Create a group</button>
           </Link>
+            <h2>Created Groups</h2>
+            {groups.length > 0 ? (
+                <table border="1" style={{ width: "100%", borderCollapse: "collapse" }}>
+                    <thead>
+                        <tr>
+                            <th>Group Name</th>
+                            <th>Created At</th>
+                            <th>Users</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {groups.map((group, index) => (
+                            <tr key={index}>
+                                <td>{group.groupName}</td>
+                                <td>{new Date(group.createdAt).toLocaleString()}</td>
+                                <td>
+                                    {group.users.map((user) => user.name).join(", ")}
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            ) : (
+                <p>No groups have been created yet.</p>
+            )}
         </div>
-
-        {/* Display loading, error or the groups table */}
-        {loading ? (
-          <p>Loading...</p>
-        ) : error ? (
-          <p className="error">{error}</p>
-        ) : (
-          <table border="1" cellPadding="10" cellSpacing="0">
-            <thead>
-              <tr>
-                <th>Group Name</th>
-                <th>Created By</th>
-                <th>Number of Members</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {groups.length > 0 ? (
-                groups.map((group) => (
-                  <tr key={group._id}>
-                    <td>{group.name}</td>
-                    <td>{group.createdBy}</td>
-                    <td>{group.members.length}</td>
-                    <td>
-                      <button
-                        className="view-button"
-                        onClick={() => console.log(`View group: ${group.name}`)}
-                      >
-                        View
-                      </button>
-                      <button
-                        className="delete-button"
-                        onClick={() => console.log(`Delete group: ${group.name}`)}
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="4">No groups found</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        )}
-      </div>
-    </div>
-  );
-};
+    );
+}
 
 export default Group;

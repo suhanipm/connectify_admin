@@ -80,29 +80,30 @@ function Creategroup() {
                     </tr>
                 </thead>
                 <tbody>
-                    {users.map((user) => (
-                        <tr key={user._id}>
-                            <td>{user.name}</td>
-                            <td>{user.email}</td>
-                            <td>
-                                <button
-                                    onClick={() => handleSelectUser(user._id)}
-                                    style={{
-                                        padding: "5px 10px",
-                                        backgroundColor: selectedUsers.includes(user._id)
-                                            ? "green"
-                                            : "blue",
-                                        color: "white",
-                                        border: "none",
-                                        cursor: "pointer",
-                                    }}
-                                >
-                                    {selectedUsers.includes(user._id) ? "Selected" : "Select"}
-                                </button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
+    {users.map((user) => (
+        <tr key={user._id}>
+            <td>{user.fullName|| "No Name Provided"}</td> {/* Fallback for missing names */}
+            <td>{user.email}</td>
+            <td>
+                <button
+                    onClick={() => handleSelectUser(user._id)}
+                    style={{
+                        padding: "5px 10px",
+                        backgroundColor: selectedUsers.includes(user._id)
+                            ? "green"
+                            : "blue",
+                        color: "white",
+                        border: "none",
+                        cursor: "pointer",
+                    }}
+                >
+                    {selectedUsers.includes(user._id) ? "Selected" : "Select"}
+                </button>
+            </td>
+        </tr>
+    ))}
+</tbody>
+
             </table>
 
             {/* Submit Button */}
