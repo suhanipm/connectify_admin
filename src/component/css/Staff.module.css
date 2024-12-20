@@ -14,6 +14,7 @@ th, td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  color: white;
 }
 
 /* Table header with specified color */
@@ -25,7 +26,7 @@ th {
 button {
   background-color: rgb(223, 104, 253); /* Initial button color */
   border: none;
-  color:black;
+  color:rgb(255, 255, 255);
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
