@@ -4,7 +4,7 @@ import home from '../assets/icons/home (2).png';       // Adjust the path as nec
 import students from '../assets/icons/students.png';
 import admin from '../assets/icons/admin.png';
 import post from '../assets/icons/post.png';
-import comments from '../assets/icons/comments.png';
+// import comments from '../assets/icons/comments.png';
 import users from '../assets/icons/users.png';
 import staff from '../assets/icons/staff.png';
 import groups from '../assets/icons/groups.png';
@@ -23,7 +23,7 @@ function Nav(){
            
            <Link to={"/posts"}><button className='menu-button'><img src={post} alt="Post" /> Post</button></Link>
            
-           <Link to={"/comments"}><button className='menu-button'><img src={comments} alt="comments" /> Comments</button></Link>
+           {/* <Link to={"/comments"}><button className='menu-button'><img src={comments} alt="comments" /> Comments</button></Link> */}
 
            <Link to={"/User"}><button className='menu-button'><img src={users} alt="users" /> Users</button></Link>
 
