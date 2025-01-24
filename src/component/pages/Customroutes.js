@@ -22,7 +22,7 @@ function Customeroutes(){
             <Route path="/" element={<Login></Login>}></Route>
             <Route path="/admin" element={<Admin></Admin>}></Route>
             <Route path="/student-database" element={<StudentDatabase></StudentDatabase>} />
-            <Route path="/comments" element={<Admin></Admin>} />
+            {/* <Route path="/comments" element={<Admin></Admin>} /> */}
             <Route path="/Addadmin" element={<Addadmin></Addadmin>}></Route>
             <Route path="/Home" element={<Home></Home>}></Route>
             <Route path="/User" element={<User></User>}></Route>

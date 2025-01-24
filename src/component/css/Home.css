@@ -35,8 +35,6 @@ body {
     min-width: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-left: 270px;
-  margin-top: 217px;
-
 }
 
 .info-card:hover {

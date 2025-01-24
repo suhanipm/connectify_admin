@@ -15,7 +15,7 @@ function Nav(){
     return(
         <div>
           <div className="menu">
-           <Link to={"/"}><button className='menu-button'><img src={home} alt="Home" /> Home</button></Link>
+           <Link to={"/home"}><button className='menu-button'><img src={home} alt="Home" /> Home</button></Link>
 
            <Link to={"/student-database" }><button className='menu-button'><img src={students} alt="Students" /> Students</button></Link>
 

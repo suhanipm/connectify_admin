@@ -1,0 +1,73 @@
+.staff-container {
+  display: flex;
+  margin-left: 550px;
+}
+
+.staff-list{
+  flex: 1;
+  padding: 20px;
+  color: black;
+}
+staff-th{
+  background-color: #1a0f0fc5; /* Deep red */
+  color: #fff; /* White text for contrast */
+  font-weight: bold;
+  text-align: left;
+  padding: 12px 15px;
+}
+
+staff-td {
+padding: 12px 15px;
+text-align: left;
+color: white;
+border: 1px solid rgba(255, 255, 255, 0.125);
+/* Table header with specified color */
+}
+staff-th {
+  color: white;
+}
+
+
+staff-button {
+  padding: 10px 20px;
+  background-color: #f04;
+  color: white;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.staff-edit-button, .staff-delete-button {
+  background: linear-gradient(45deg, #de0f0f, #f06a6a);
+  border: none;
+  color: black; 
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background 0.4s ease;}
+
+.staff-edit-button:hover, .staff-delete-button:hover {
+  background: linear-gradient(45deg, #ff9999, #ffcccc);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Table buttons smaller for better fit */
+.staff-button button {
+  padding: 8px 16px; /* Adjust size for table buttons */
+  border-radius: 10px; /* Smaller curve for table buttons */
+}
+.Addstaff {
+  display: flex;
+  justify-content: space-around;
+
+}
+  
+
+.Addstaff > h1{
+  margin-right: 155px;
+}
